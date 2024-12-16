@@ -32,7 +32,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintf(w, "\n===> local IP: %q\n\n",GetOutboundIP())
 	fmt.Fprintf(w, "Env message = %s\n", os.Getenv("message"))
-	fmt.Fprintf(w, "Env version = %s\n", os.Getenv("message"))
+	fmt.Fprintf(w, "Env version = %s\n", os.Getenv("version"))
+	fmt.Fprintf(w, "Env app name = simplehttp")
 }
 
 func GetOutboundIP() net.IP {
